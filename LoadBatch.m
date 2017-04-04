@@ -10,7 +10,7 @@ X = im2double(I);
 
 
 for i=1:10000
-   Y(i,(A.labels(i)+1))=1;
+   Y((A.labels(i)+1),i)=1;
 end
 y={};
 for i=1:10000
