@@ -23,3 +23,6 @@ P = EvaluateClassifier(xp, wp, b);
 %%
 lambda=0;
 J = ComputeCost(xp, Y1, wp, b, lambda);
+%%
+acc = ComputeAccuracy(xp, y1, wp, b);
+%%
