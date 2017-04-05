@@ -18,6 +18,8 @@ b = mean + std.*randn(K, 1);
 n=length(X1);
 xp=reshape(X1,3072,n);
 wp=reshape(W,K,3072);
-P = EvaluateClassifier(X1, W, b);
+P = EvaluateClassifier(xp, wp, b);
 %P = EvaluateClassifier(xp(:, 1:100), wp, b);   %%Testing the function
 %%
+lambda=0;
+J = ComputeCost(xp, Y1, wp, b, lambda);
