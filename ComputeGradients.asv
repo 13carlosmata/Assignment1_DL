@@ -10,10 +10,12 @@ for i=1:n
     Xt=(X(:,i))';
   
     %ops
-    g=-Yt/(Yt*Pi) * (diag(Pi)-Pi*(Pi)');
-    Lb=Lb+g';
-    lw=(g')*Xt;
-    LW=LW+lw;  
+    g=-((Yt*Pi)\Yt) * (diag(Pi)-Pi*(Pi)');
+    Lb=Lb+g;
+    lw=transpose(g)*Xt;
+    LW=LW+lw;
+    
+    
 end
 LW=LW/n;
 Lb=(Lb/n);

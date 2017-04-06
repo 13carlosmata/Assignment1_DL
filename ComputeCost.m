@@ -4,21 +4,20 @@ P=[];
 n=size(X,2);
 D=n;
 lcross=0;
-tr1=transpose(Y);
+tr1=(Y)';
+P = EvaluateClassifier(X, W, b);
+
 for i=1:n
-  for j=1:K
-      if tr1(i,j)==1
-          index=j;
-      end
-  end
-  xp1=X(:,i);
-  s =W*xp1 + b;
-  P1=softmax(s);
-  P=[P,P1];
-  lcross=-log10(tr1(i,index)*P1(index))+lcross;
+%   for j=1:K
+%       if tr1(i,j)==1
+%           index=j;
+%       end
+%  end
+
+  lcross=-log(tr1(i,:)*P(:,i))+lcross;
 end
-J1=lcross/10000;
-sumW=sum(W(:));
-J2=lambda*sumW^2;
+J1=lcross/n;
+sumW=sum(W.^2);
+J2=lambda*sum(sumW);
 J=J1+J2;
 end

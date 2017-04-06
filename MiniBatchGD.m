@@ -1,0 +1,1 @@
+function [Wstar, bstar] = MiniBatchGD(X, Y, GDparams, W, b, lambda)
