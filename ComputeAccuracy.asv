@@ -1,9 +1,0 @@
-function acc = ComputeAccuracy(X, y, W, b)
-[argvalue, argmax] = max(poi);
-
-
-
-% 
-% each column of X corresponds to an image and X has size dn.
-%  Y is the vector of ground truth labels of length n.
-%  acc is a scalar value containing the accuracy.

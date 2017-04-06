@@ -26,3 +26,7 @@ J = ComputeCost(xp, Y1, wp, b, lambda);
 %%
 acc = ComputeAccuracy(xp, y1, wp, b);
 %%
+[LW, Lb] = ComputeGradients(xp, Y1, P, wp, lambda);
+
+
+
