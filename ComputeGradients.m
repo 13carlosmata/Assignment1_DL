@@ -1,4 +1,4 @@
-function [LW, Lb] = ComputeGradients(X, Y, P, W, lambda)
+function [LW, Lb,g] = ComputeGradients(X, Y, P, W, lambda)
 n=size(X,2);
 Lb=0;
 LW=0;
