@@ -20,6 +20,4 @@ for i=1:GD.n_epochs
     Wstar=W;
     bstar=b;
 end
-%plot(JK);
-%JK
 end

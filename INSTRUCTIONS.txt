@@ -1,0 +1,16 @@
+Extracted files should be in one folder.
+
+The folder "cifar-10-batches-mat" is empty, but must contain the files:
+batches.meta
+data_batch_1.mat
+data_batch_2.mat
+data_batch_3.mat
+data_batch_4.mat
+data_batch_5.mat
+test_batch.mat
+
+The script main.m contains all the routines for calling the separated functions and execute the code.This is the code that must be run.
+
+The folder Result_Pics, contain the images of the weigth matrix W and the training vs validation data regarding the cost function.
+
+It can also be found the Report done for this assignment.
